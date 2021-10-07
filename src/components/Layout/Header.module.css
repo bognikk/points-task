@@ -1,0 +1,52 @@
+header {
+}
+
+.heading {
+ padding: 1rem 0;
+}
+
+.cards {
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+}
+
+p {
+ margin: 0.7rem 0;
+ font-size: 20px;
+}
+
+p:nth-child(2){
+ font-weight: bold;
+}
+
+p:first-child:first-letter {
+  text-transform: capitalize;
+}
+
+.controls {
+ display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+}
+
+.filter, .sort {
+ display: flex;
+ align-items: center;
+ min-width: auto;
+}
+
+input {
+    visibility:hidden;
+}
+
+label {
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+input:checked + label {
+    background: black;
+    color: white;
+}
