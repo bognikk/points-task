@@ -73,7 +73,11 @@ const Header = ({ cardData, setOptionHandler }) => {
         <div className={classes.cards}>
           {cardData.map((data) => {
             return (
-              <Card key={data.id} onClick={() => setOptionHandler(data.id)}>
+              <Card
+                key={data.id}
+                id={data.id}
+                setOptionHandler={setOptionHandler}
+              >
                 <p>
                   {data.type} {data.amount} miles
                 </p>

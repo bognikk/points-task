@@ -62,13 +62,14 @@ const data = [
 
 function App() {
   const [cardData, setCardData] = useState(data);
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState(0);
 
   const setOptionHandler = (id) => {
-    console.log(id);
+    // setSelectedOption(id);
+    // console.log(id);
     // const data = cardData;
     const foundData = cardData.find((item) => item.id === id);
-    console.log(foundData)
+    // console.log(foundData)
     setSelectedOption(foundData);
   };
 

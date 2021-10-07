@@ -19,14 +19,14 @@ const Payment = ({ selectedOption }) => {
           <label className={classes.label} htmlFor="number">
             Card number
           </label>
-          <input className={classes.input} type="text" id="number" />
+          <input className={classes.input} type="number" id="number" />
 
           <label className={classes.label} htmlFor="number">
             Expiration date
           </label>
           <input
             className={classes.smallInput}
-            type="text"
+            type="number"
             id="number"
             placeholder="MMYY"
           />
@@ -34,18 +34,23 @@ const Payment = ({ selectedOption }) => {
           <label className={classes.label} htmlFor="number">
             CVC
           </label>
-          <input className={classes.smallInput} type="text" id="number" />
+          <input
+            className={classes.smallInput}
+            type="number"
+            id="number"
+            max="3"
+          />
         </div>
         <div className={classes.summary}>
           <h2>Order summary</h2>
           <p>
-            Total miles <span>2000</span>
+            Total miles <span>{selectedOption.amount}</span>
           </p>
           <p>
             GST/HST <span>$20.00</span>
           </p>
           <p>
-            Total cost <span>$197.00</span>
+            Total cost <span>{selectedOption.cost + 20}</span>
           </p>
         </div>
       </section>
