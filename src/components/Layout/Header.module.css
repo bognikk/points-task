@@ -1,23 +1,20 @@
-header {
-}
-
 .heading {
- padding: 1rem 0;
+  padding: 1rem 0;
 }
 
 .cards {
- display: flex;
- justify-content: space-between;
- flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 p {
- margin: 0.7rem 0;
- font-size: 20px;
+  margin: 0.7rem 0;
+  font-size: 20px;
 }
 
-p:nth-child(2){
- font-weight: bold;
+span {
+  font-weight: bold;
 }
 
 p:first-child:first-letter {
@@ -25,28 +22,34 @@ p:first-child:first-letter {
 }
 
 .controls {
- display: flex;
- justify-content: space-between;
- flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.filter, .sort {
- display: flex;
- align-items: center;
- min-width: auto;
+.filter,
+.sort {
+  display: flex;
+  align-items: center;
+  min-width: auto;
 }
 
-input {
-    visibility:hidden;
+.input {
+  visibility: hidden;
 }
 
-label {
+.label {
   cursor: pointer;
   padding: 0.5rem;
   border-radius: 5px;
 }
 
-input:checked + label {
-    background: black;
-    color: white;
+.input:checked + label {
+  background: black;
+  color: white;
+}
+
+.label:hover {
+  background: black;
+  color: white;
 }

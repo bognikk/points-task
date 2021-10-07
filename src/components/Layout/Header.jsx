@@ -1,7 +1,7 @@
 import classes from "./Header.module.css";
 import Card from "../UI/Card";
 
-const Header = ({ cardData }) => {
+const Header = ({ cardData, setOptionHandler }) => {
   return (
     <>
       <header className={classes.header}>
@@ -11,34 +11,69 @@ const Header = ({ cardData }) => {
         <div className={classes.controls}>
           <div className={classes.filter}>
             <p>Filter by:</p>
-            <input type="checkbox" value="buy" name="buy" id="buy" />
-            <label for="buy">buy</label>
-
-            <input type="checkbox" value="gift" name="gift" id="gift" />
-            <label for="gift">gift</label>
+            <input
+              className={classes.input}
+              type="checkbox"
+              value="buy"
+              name="buy"
+              id="buy"
+            />
+            <label className={classes.label} htmlFor="buy">
+              buy
+            </label>
 
             <input
+              className={classes.input}
+              type="checkbox"
+              value="gift"
+              name="gift"
+              id="gift"
+            />
+            <label className={classes.label} htmlFor="gift">
+              gift
+            </label>
+
+            <input
+              className={classes.input}
               type="checkbox"
               value="transfer"
               name="transfer"
               id="transfer"
             />
-            <label for="transfer">transfer</label>
+            <label className={classes.label} htmlFor="transfer">
+              transfer
+            </label>
           </div>
 
           <div className={classes.sort}>
             <p>Sort by price:</p>
-            <input type="checkbox" value="low" name="low" id="low" />
-            <label for="low">low-high</label>
-            <input type="checkbox" value="high" name="high" id="high" />
-            <label for="high">high-low</label>
+            <input
+              className={classes.input}
+              type="checkbox"
+              value="low"
+              name="low"
+              id="low"
+            />
+            <label className={classes.label} htmlFor="low">
+              low-high
+            </label>
+            <input
+              className={classes.input}
+              type="checkbox"
+              value="high"
+              name="high"
+              id="high"
+            />
+            <label className={classes.label} htmlFor="high">
+              high-low
+            </label>
           </div>
         </div>
 
         <div className={classes.cards}>
           {cardData.map((data) => {
             return (
-              <Card key={data.id}>
+              <Card key={data.id} onClick={() => setOptionHandler(data.id)}>
                 <p>
                   {data.type} {data.amount} miles
                 </p>
