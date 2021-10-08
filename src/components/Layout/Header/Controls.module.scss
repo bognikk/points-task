@@ -1,0 +1,26 @@
+.filter,
+.sort {
+  display: flex;
+  align-items: center;
+  min-width: auto;
+}
+
+.input {
+  visibility: hidden;
+
+  &:checked + label {
+    background: black;
+    color: white;
+  }
+}
+
+.label {
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 5px;
+
+  &:hover {
+    background: black;
+    color: white;
+  }
+}

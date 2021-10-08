@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Header from "./components/Layout/Header";
+import Header from "./components/Layout/Header/Header";
 import Form from "./components/Layout/Form/Form";
 
 const data = [
@@ -65,11 +65,7 @@ function App() {
   const [selectedOption, setSelectedOption] = useState(0);
 
   const setOptionHandler = (id) => {
-    // setSelectedOption(id);
-    // console.log(id);
-    // const data = cardData;
     const foundData = cardData.find((item) => item.id === id);
-    // console.log(foundData)
     setSelectedOption(foundData);
   };
 

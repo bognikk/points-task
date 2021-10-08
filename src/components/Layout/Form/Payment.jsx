@@ -1,11 +1,11 @@
-import classes from "./Payment.module.css";
+import classes from "./Payment.module.scss";
 
 const Payment = ({ selectedOption }) => {
   return (
     <>
       <section className={classes.payment}>
         <div className={classes.creditCard}>
-          <h2>Payment details</h2>
+          <h2 className={classes.heading}>Payment details</h2>
           <p>
             We accept all major credit cards. Please ensure that you enter your
             details exactly as they appear on your credit card statement. All
@@ -38,7 +38,7 @@ const Payment = ({ selectedOption }) => {
             className={classes.smallInput}
             type="number"
             id="number"
-            max="3"
+            min="0"
           />
         </div>
         <div className={classes.summary}>

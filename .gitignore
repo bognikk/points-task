@@ -5,7 +5,10 @@
 # dependencies
 /node_modules
 /.pnp
+
+ 
 .pnp.js
+/Nikola-Bogicevic-GitHub.txt
 
 # testing
 /coverage

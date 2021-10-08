@@ -6,10 +6,11 @@
   margin: 1rem 0;
   width: 32%;
   min-width: 276px;
-}
 
-.card:hover {
-  cursor: pointer;
-  background-color: black;
-  color: white;
+  &:hover {
+    cursor: pointer;
+    background-color: black;
+    border: 2px solid black;
+    color: white;
+  }
 }

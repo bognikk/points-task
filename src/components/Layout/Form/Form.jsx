@@ -1,6 +1,6 @@
 import Payment from "./Payment";
 
-import classes from "./Form.module.css";
+import classes from "./Form.module.scss";
 
 const Form = ({ selectedOption }) => {
   return (

@@ -1,0 +1,22 @@
+.heading {
+  padding: 1rem 0;
+}
+
+p {
+  margin: 0.7rem 0;
+  font-size: 20px;
+
+  &:first-child:first-letter {
+    text-transform: capitalize;
+  }
+}
+
+span {
+  font-weight: bold;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
