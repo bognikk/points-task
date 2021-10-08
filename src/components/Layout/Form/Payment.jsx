@@ -1,6 +1,9 @@
 import classes from "./Payment.module.scss";
 
 const Payment = ({ selectedOption }) => {
+  const amount = !selectedOption.amount ? 0 : selectedOption.amount;
+  const cost = !selectedOption.cost ? 0 : selectedOption.cost + 20;
+
   return (
     <>
       <section className={classes.payment}>
@@ -34,23 +37,18 @@ const Payment = ({ selectedOption }) => {
           <label className={classes.label} htmlFor="number">
             CVC
           </label>
-          <input
-            className={classes.smallInput}
-            type="number"
-            id="number"
-            min="0"
-          />
+          <input className={classes.smallInput} type="number" id="number" />
         </div>
         <div className={classes.summary}>
           <h2>Order summary</h2>
           <p>
-            Total miles <span>{selectedOption.amount}</span>
+            Total miles <span>{amount}</span>
           </p>
           <p>
             GST/HST <span>$20.00</span>
           </p>
           <p>
-            Total cost <span>{selectedOption.cost + 20}</span>
+            Total cost <span>{cost}</span>
           </p>
         </div>
       </section>

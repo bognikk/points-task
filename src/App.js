@@ -69,9 +69,27 @@ function App() {
     setSelectedOption(foundData);
   };
 
+  const filterData = (filter) => {
+    if (filter === "gift" || filter === "buy" || filter === "transfer") {
+      console.log(filter);
+    } else {
+      console.log("nije");
+    }
+    // if (!filter) {
+    //   setCardData(data);
+    // }
+    // const filteredData = cardData.find((item) => item.type === filter);
+    // setCardData(filteredData);
+  };
+
   return (
     <>
-      <Header cardData={cardData} setOptionHandler={setOptionHandler} />
+      <Header
+        cardData={cardData}
+        setOptionHandler={setOptionHandler}
+        filterData={filterData}
+        selectedID={selectedOption.id}
+      />
       <Form selectedOption={selectedOption} />
     </>
   );

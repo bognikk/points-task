@@ -11,7 +11,7 @@
   // min-width: 276px;
 
   @include tablet {
-  width: 32%;
+    width: 32%;
   }
 
   &:hover {
@@ -19,5 +19,23 @@
     background-color: black;
     border: 2px solid black;
     color: white;
+  }
+}
+
+.selectedCard {
+  border-radius: 5px;
+  background-color: black;
+  border: 2px solid black;
+  color: white;
+  text-align: center;
+  margin: $spacing 0;
+  width: 100%;
+
+  @include tablet {
+    width: 32%;
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 }

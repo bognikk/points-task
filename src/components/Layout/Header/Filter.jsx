@@ -1,6 +1,10 @@
+import { useState } from "react";
+
 import classes from "./Controls.module.scss";
 
-const Filter = () => {
+const Filter = ({ filterData }) => {
+  const [filterArray] = useState([]);
+
   return (
     <div className={classes.filter}>
       <p>Filter by:</p>
@@ -11,6 +15,7 @@ const Filter = () => {
         value="gift"
         name="gift"
         id="gift"
+        onClick={() => filterData("gift")}
       />
       <label className={classes.label} htmlFor="gift">
         gift

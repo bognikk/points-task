@@ -6,9 +6,10 @@
   justify-content: space-between;
   flex-wrap: wrap;
   height: 350px;
-  overflow: scroll;
+  overflow-y: scroll;
 
   @include tablet {
     height: auto;
+    overflow: hidden;
   }
 }
