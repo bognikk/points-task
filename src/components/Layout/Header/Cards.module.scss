@@ -1,5 +1,14 @@
+@use "../../../partials/variables" as *;
+@use "../../../partials/mixins" as *;
+
 .cards {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  height: 350px;
+  overflow: scroll;
+
+  @include tablet {
+    height: auto;
+  }
 }

@@ -1,0 +1,47 @@
+@use "../../../partials/variables" as *;
+@use "../../../partials/mixins" as *;
+
+.billing {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+ margin-top: 1rem;
+}
+
+
+.label {
+  margin-top: 2rem;
+
+  &:first-child {
+    margin-top: 1rem;
+  }
+}
+
+.input {
+  padding: 1rem;
+  border: 2px solid #c8c8c8;
+  margin-top: 0.5rem;
+}
+
+.smallInput {
+  padding: 1rem;
+  border: 2px solid #c8c8c8;
+  margin-top: 0.5rem;
+  width: 100%;
+
+  @include tablet {
+    width: 45%;
+  }
+
+  &:last-child {
+    margin-bottom: 1rem;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

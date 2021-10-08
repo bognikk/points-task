@@ -1,11 +1,18 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+
 .card {
   border-radius: 5px;
   border: 2px solid gray;
   background-color: white;
   text-align: center;
-  margin: 1rem 0;
+  margin: $spacing 0;
+  width: 100%;
+  // min-width: 276px;
+
+  @include tablet {
   width: 32%;
-  min-width: 276px;
+  }
 
   &:hover {
     cursor: pointer;
