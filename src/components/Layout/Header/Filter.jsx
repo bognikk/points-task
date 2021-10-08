@@ -1,9 +1,9 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 import classes from "./Controls.module.scss";
 
 const Filter = ({ filterData }) => {
-  const [filterArray] = useState([]);
+  // const [filterArray] = useState([]);
 
   return (
     <div className={classes.filter}>

@@ -61,19 +61,23 @@ const data = [
 ];
 
 function App() {
-  const [cardData, setCardData] = useState(data);
+  const [cardData] = useState(data);
   const [selectedOption, setSelectedOption] = useState(0);
 
   const setOptionHandler = (id) => {
-    const foundData = cardData.find((item) => item.id === id);
-    setSelectedOption(foundData);
+    if (id === selectedOption.id) {
+      setSelectedOption(0);
+    } else {
+      const foundData = cardData.find((item) => item.id === id);
+      setSelectedOption(foundData);
+    }
   };
 
   const filterData = (filter) => {
     if (filter === "gift" || filter === "buy" || filter === "transfer") {
       console.log(filter);
     } else {
-      console.log("nije");
+      console.log("nothing");
     }
     // if (!filter) {
     //   setCardData(data);
